@@ -460,7 +460,7 @@ function initYellowDoodleUnderline() {
         // Create yellow doodle underline
         const underline = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         const startX = rect.left;
-        const startY = rect.bottom + 30; // Properly below the word
+        const startY = rect.bottom + 5; // Properly below the word
         const endX = rect.right;
         const midY = startY + 10; // Subtle curve
 
