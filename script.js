@@ -377,10 +377,11 @@ function initMagneticButtons() {
 }
 
 /* ============================================
-   3D TILT EFFECT FOR CARDS
+   3D TILT EFFECT FOR SKILL CARDS ONLY
    ============================================ */
 function initTiltEffects() {
-    const cards = document.querySelectorAll('.skill-card, .project-card');
+    // Only apply tilt to skill cards, not project cards
+    const cards = document.querySelectorAll('.skill-card');
 
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -460,7 +461,7 @@ function initYellowDoodleUnderline() {
         // Create yellow doodle underline
         const underline = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         const startX = rect.left;
-        const startY = rect.bottom + 2; // Properly below the word
+        const startY = rect.bottom - 10; // Properly below the word
         const endX = rect.right;
         const midY = startY + 10; // Subtle curve
 
